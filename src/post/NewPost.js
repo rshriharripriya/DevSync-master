@@ -74,37 +74,37 @@ class NewPost extends Component {
     newPostForm = (title, body) => (
         <form>
             <div className="form-group">
-                <label className="text-muted">Post Photo</label>
+                <label className="text-muted text-light">Post Photo</label>
                 <input
                     onChange={this.handleChange("photo")}
                     type="file"
                     accept="image/*"
-                    className="form-control"
+                    className="form-control text-light"
                 />
             </div>
-            <div className="form-group">
-                <label className="text-muted">Title</label>
+            <div className="form-group text-light">
+                <label className="text-muted text-light">Title</label>
                 <input
                     onChange={this.handleChange("title")}
                     type="text"
-                    className="form-control"
+                    className="form-control text-light"
                     value={title}
                 />
             </div>
 
-            <div className="form-group">
-                <label className="text-muted">Body</label>
+            <div className="form-group text-light">
+                <label className="text-muted text-light">Body</label>
                 <textarea
                     onChange={this.handleChange("body")}
                     type="text"
-                    className="form-control"
+                    className="form-control text-light"
                     value={body}
                 />
             </div>
 
             <button
                 onClick={this.clickSubmit}
-                className="btn btn-raised btn-primary"
+                className="btn btn-raised btn-primary text-light"
             >
                 Create Post
             </button>
@@ -128,7 +128,7 @@ class NewPost extends Component {
 
         return (
             <div className="container">
-                <h2 className="mt-5 mb-5">Create a new post</h2>
+                <h2 className="mt-5 mb-5 text-light">Create a new post</h2>
                 <div
                     className="alert alert-danger"
                     style={{ display: error ? "" : "none" }}

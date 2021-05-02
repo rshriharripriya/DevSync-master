@@ -22,11 +22,16 @@ class Users extends Component {
     }
 
     renderUsers = users => (
-        <div className="row">
+        <div className="row p-3 " style={{
+    padding: "10px",display:"flex",marginLeft:"10cm"
+    }}>
             {users.map((user, i) => (
-                <div className="card col-md-4" key={i}>
+                <div className="card col-md-4 center " key={i} style={{borderRadius: "10px",
+    padding: "10px",
+    margin: "10px",}}>
                     <img
-                        style={{ height: "200px", width: "auto" }}
+                        style={{  height: "200px", width: "200px",
+                        margin:"0.5cm", borderRadius: "50%",}}
                         className="img-thumbnail"
                         src={`${process.env.REACT_APP_API_URL}/user/photo/${
                             user._id
@@ -34,12 +39,13 @@ class Users extends Component {
                         onError={i => (i.target.src = `${DefaultProfile}`)}
                         alt={user.name}
                     />
-                    <div className="card-body">
+                    <div className="card-body center">
                         <h5 className="card-title">{user.name}</h5>
                         <p className="card-text">{user.email}</p>
                         <Link
                             to={`/user/${user._id}`}
                             className="btn btn-raised btn-primary btn-sm"
+                            style={{float:"left"}}
                         >
                             View Profile
                         </Link>
@@ -52,8 +58,8 @@ class Users extends Component {
     render() {
         const { users } = this.state;
         return (
-            <div className="container">
-                <h2 className="mt-5 mb-5">Users</h2>
+            <div className="homeheight p-2 m-2 center">
+                <h3 className="text-light align-center" style={{textAlign:"center"}}>Users</h3>
 
                 {this.renderUsers(users)}
             </div>

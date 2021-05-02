@@ -89,11 +89,11 @@ class Profile extends Component {
 
     return (
       <div className="container">
-        <h2 className="mt-5 mb-5">Profile</h2>
+        <h2 className="mt-5 mb-5 text-light">Profile</h2>
         <div className="row">
           <div className="col-md-4">
             <img
-              style={{ height: "200px", width: "auto" }}
+              style={{ height: "200px", width: "auto" ,borderRadius:"50%"}}
               className="img-thumbnail"
               src={photoUrl}
               onError={i => (i.target.src = `${DefaultProfile}`)}

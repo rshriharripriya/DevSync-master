@@ -96,49 +96,49 @@ class Signup extends Component {
 
     signupForm = (name, email, password, recaptcha) => (
         <form>
-            <div className="form-group">
-                <label className="text-muted">Name</label>
+            <div className="form-group form text-light">
+                <label className="text-muted text-light">Name</label>
                 <input
                     onChange={this.handleChange("name")}
                     type="text"
-                    className="form-control"
+                    className="form-control textarea"
                     value={name}
                 />
             </div>
-            <div className="form-group">
-                <label className="text-muted">Email</label>
+            <div className="form-group form text-light">
+                <label className="text-muted textarea text-light">Email</label>
                 <input
                     onChange={this.handleChange("email")}
                     type="email"
-                    className="form-control"
+                    className="form-control textarea"
                     value={email}
                 />
             </div>
-            <div className="form-group">
-                <label className="text-muted">Password</label>
+            <div className="form-group form text-light">
+                <label className="text-muted textarea text-light">Password</label>
                 <input
                     onChange={this.handleChange("password")}
                     type="password"
-                    className="form-control"
+                    className="form-control textarea"
                     value={password}
                 />
             </div>
 
-            <div className="form-group">
-                <label className="text-muted">
+            <div className="form-group text-light">
+                <label className="text-muted text-light">
                     {recaptcha ? "Thanks. You got it!" : "What day is today?"}
                 </label>
 
                 <input
                     onChange={this.recaptchaHandler}
                     type="text"
-                    className="form-control"
+                    className="form-control text-light"
                 />
             </div>
 
             <button
                 onClick={this.clickSubmit}
-                className="btn btn-raised btn-primary"
+                className="btn btn-raised btn-primary text-light"
             >
                 Submit
             </button>
@@ -148,28 +148,26 @@ class Signup extends Component {
     render() {
         const { name, email, password, error, open, recaptcha } = this.state;
         return (
-            <div className="container">
-                <h2 className="mt-5 mb-5">Signup</h2>
-
+            <div className="container text-light">
+                <h2 className="text-light">Signup</h2>
                 <hr />
                 <SocialLogin />
-
                 <hr />
+                <h6>Or</h6>
                 <br />
-
                 <div
                     className="alert alert-danger"
-                    style={{ display: error ? "" : "none" }}
+                    style={{ display: error ? "" : "none" , width:"max-content"}}
                 >
                     {error}
                 </div>
 
                 <div
-                    className="alert alert-info"
+                    className="alert alert-info "
                     style={{ display: open ? "" : "none" }}
                 >
                     New account is successfully created. Please{" "}
-                    <Link to="/signin">Sign In</Link>.
+                    <Link to="/signin" className="text-primary" >Sign In</Link>.
                 </div>
 
                 {this.signupForm(name, email, password, recaptcha)}

@@ -19,12 +19,11 @@ class ProfileTabs extends Component {
                                     <Link to={`/user/${person._id}`}>
                                         <img
                                             style={{
-                                                borderRadius: "50%",
-                                                border: "1px solid black"
+                                                height: "20px", width: "20px",display:"block"
                                             }}
                                             className="float-left mr-2"
-                                            height="30px"
-                                            width="30px"
+                                            height="3px"
+                                            width="3px"
                                             onError={i =>
                                                 (i.target.src = `${DefaultProfile}`)
                                             }
@@ -53,14 +52,14 @@ class ProfileTabs extends Component {
                             <div key={i}>
                                 <div>
                                     <Link to={`/user/${person._id}`}>
-                                        <img
+                                        {/*<img
                                             style={{
                                                 borderRadius: "50%",
-                                                border: "1px solid black"
+                                               display:"flex",
                                             }}
                                             className="float-left mr-2"
-                                            height="30px"
-                                            width="30px"
+                                            height="10px"
+                                            width="10px"
                                             onError={i =>
                                                 (i.target.src = `${DefaultProfile}`)
                                             }
@@ -68,7 +67,7 @@ class ProfileTabs extends Component {
                                                 process.env.REACT_APP_API_URL
                                             }/user/photo/${person._id}`}
                                             alt={person.name}
-                                        />
+                                        />*/}
                                         <div>
                                             <p className="lead">
                                                 {person.name}

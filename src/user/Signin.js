@@ -83,34 +83,34 @@ class Signin extends Component {
 
     signinForm = (email, password, recaptcha) => (
         <form>
-            <div className="form-group">
-                <label className="text-muted">Email</label>
+            <div className="form-group form text-light">
+                <label className="text-muted text-light">Email</label>
                 <input
                     onChange={this.handleChange("email")}
                     type="email"
-                    className="form-control"
+                    className="form-control textarea"
                     value={email}
                 />
             </div>
-            <div className="form-group">
-                <label className="text-muted">Password</label>
+            <div className="form-group form text-light">
+                <label className="text-muted textarea text-light" >Password</label>
                 <input
                     onChange={this.handleChange("password")}
                     type="password"
-                    className="form-control"
+                    className="form-control textarea"
                     value={password}
                 />
             </div>
 
-            <div className="form-group">
-                <label className="text-muted">
+            <div className="form-group text-light">
+                <label className="text-muted text-light">
                     {recaptcha ? "Thanks. You got it!" : "What day is today?"}
                 </label>
 
                 <input
                     onChange={this.recaptchaHandler}
                     type="text"
-                    className="form-control"
+                    className="form-control text-light"
                 />
             </div>
 
@@ -138,23 +138,22 @@ class Signin extends Component {
         }
 
         return (
-            <div className="container">
-                <h2 className="mt-5 mb-5">SignIn</h2>
+            <div className="container text-light">
+                <h2 className="text-light">SignIn</h2>
                 <hr />
                 <SocialLogin />
-
                 <hr />
+                <h6>Or</h6>
                 <br />
-
                 <div
                     className="alert alert-danger"
-                    style={{ display: error ? "" : "none" }}
+                    style={{ display: error ? "" : "none", width:"max-content" }}
                 >
                     {error}
                 </div>
 
                 {loading ? (
-                    <div className="jumbotron text-center">
+                    <div className="jumbotron text-center text-light">
                         <h2>Loading...</h2>
                     </div>
                 ) : (
@@ -166,7 +165,7 @@ class Signin extends Component {
                 <p>
                     <Link
                         to="/forgot-password"
-                        className="btn btn-raised btn-danger"
+                        className="btn btn-raised btn-danger text-light"
                     >
                         {" "}
                         Forgot Password
