@@ -6,8 +6,7 @@
 ### DevSync is simple, yet it solves a major problem.Hackers working on a project may not be able to complete it. These unfinished projects may be a dream for them but they couldn't execute it in action.So they can post the  idea, description, and skills required in our platform. This post can be seen by developers all over the world and anyone with the skillset can opt to contribute. they will immediately be connected with the hacker. So, after completion, the developer can either get an incentive for his work, or can be added as a contributor in github. 
 ### lets see DevSync in action!
 
-## Demo Link
-### <a href="https://devsync.tech/">DevSync</a>
+
 ## Team Members
 
 #### - [Magesh Sundar G](https://github.com/MageshSundarG)
